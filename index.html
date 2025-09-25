@@ -1,10 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Семестровая работа</title>
+    <link rel="stylesheet" href="style/styles.css">
 </head>
 <body>
-$END$
+<div class="page-container">
+    <div class="header">Портфолио</div>
+
+    <nav class="nav">
+        <ul class="nav-list">
+            <li><a href="index.html" class="nav-link">Главная</a></li>
+            <li><a href="pages/news.html" class="nav-link">Новости</a></li>
+            <li><a href="pages/practices.html" class="nav-link">Практики</a></li>
+            <li><a href="pages/goods.html" class="nav-link">Товары</a></li>
+            <li><a href="pages/contacts.html" class="nav-link">Контакты</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <section class="profile-header">
+            <h1 class="profile-title">Информация об авторе</h1>
+            <img class="profile-photo" src="images/photo.png" alt="Фото автора">
+            <h2 class="profile-name">Петренко Екатерина</h2>
+            <p class="profile-group">ЭФБО-04-24</p>
+        </section>
+
+        <section class="about-me">
+            <p>Студент 2 курса, профиль «Фуллстек-разработка». Интересуюсь веб-разработкой, серверными технологиями и проектированием приложений.</p>
+        </section>
+
+        <section class="skills-container">
+            <div class="skill-tag">HTML</div>
+            <div class="skill-tag">CSS</div>
+            <div class="skill-tag">JavaScript</div>
+            <div class="skill-tag">Python/Django</div>
+        </section>
+
+        <section class="experience-section">
+            <h2 class="section-title">Опыт работы</h2>
+            <div class="experience-card">
+                <h3 class="experience-title">Учебные проекты</h3>
+                <p class="experience-desc">Создание учебных веб-сайтов, работа с API и базами данных.</p>
+            </div>
+            <div class="experience-card">
+                <h3 class="experience-title">Командные проекты</h3>
+                <p class="experience-desc">Участие в разработке студенческих сервисов РТУ МИРЭА.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">© 2025 Петренко Екатерина</footer>
+</div>
 </body>
 </html>
