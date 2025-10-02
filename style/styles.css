@@ -1,3 +1,4 @@
+/* === Общий стиль === */
 body {
     font-family: 'Segoe UI', Tahoma, sans-serif;
     margin: 0;
@@ -22,7 +23,7 @@ body {
     box-shadow: 0 0 40px rgba(0,0,0,0.15);
 }
 
-/* Шапка */
+/* === Шапка === */
 .header {
     background: #2c3e50;
     color: white;
@@ -34,7 +35,7 @@ body {
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-/* Навигация */
+/* === Навигация === */
 .nav {
     background: #2c3e50;
     padding: 15px 0;
@@ -63,12 +64,58 @@ body {
     transform: translateY(-2px);
 }
 
-/* Контент */
+.nav-link.active {
+    background: rgba(255,255,255,0.25);
+}
+
+/* === Контент === */
 .content {
     padding: 50px 40px;
 }
 
-/* Профиль */
+/* === Новости === */
+.news-section {
+    margin-top: 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #2c3e50;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.news-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.news-card h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.news-meta {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* === Профиль === */
 .profile-header {
     text-align: center;
     margin-bottom: 30px;
@@ -90,7 +137,7 @@ body {
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 
-/* Навыки */
+/* === Навыки === */
 .skills-container {
     display: flex;
     justify-content: center;
@@ -115,7 +162,7 @@ body {
     box-shadow: 0 6px 14px rgba(0,0,0,0.15);
 }
 
-/* Опыт */
+/* === Опыт === */
 .experience-card {
     border-left: 5px solid #667eea;
     margin: 20px 0;
@@ -131,18 +178,7 @@ body {
     box-shadow: 0 6px 18px rgba(0,0,0,0.1);
 }
 
-/* Новости */
-.news-card {
-    border-bottom: 1px solid #ddd;
-    padding: 20px 0;
-    transition: background 0.3s ease;
-}
-
-.news-card:hover {
-    background: #f9f9f9;
-}
-
-/* Товары */
+/* === Товары === */
 .goods-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -169,7 +205,7 @@ body {
     margin-bottom: 15px;
 }
 
-/* Кнопки */
+/* === Кнопки === */
 .button {
     background: #667eea;
     color: white;
@@ -186,7 +222,78 @@ body {
     transform: scale(1.05);
 }
 
-/* Футер */
+/* === Модальное окно (Практическая №10) === */
+dialog {
+    border: none;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    width: 400px;
+    max-width: 90%;
+}
+
+dialog::backdrop {
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(3px);
+}
+
+.modal-header h2 {
+    margin-top: 0;
+    color: #2c3e50;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: inherit;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.btn {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.btn-primary {
+    background: #667eea;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: #4facfe;
+}
+
+.btn-secondary {
+    background: #ccc;
+}
+
+.btn-secondary:hover {
+    background: #bbb;
+}
+
+/* === Футер === */
 .footer {
     background: #2c3e50;
     color: white;
@@ -194,4 +301,15 @@ body {
     padding: 25px;
     font-size: 14px;
     letter-spacing: 0.5px;
+}
+
+/* === Адаптив === */
+@media (max-width: 768px) {
+    .nav-list {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .news-grid, .goods-grid {
+        grid-template-columns: 1fr;
+    }
 }
